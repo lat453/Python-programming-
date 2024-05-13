@@ -1,0 +1,45 @@
+import random
+
+voter_list = ["Voter1", "Voter2", "Voter3", "Voter4", "Voter5", "Voter6", "Voter7", "Voter8", "Voter9", "Voter10"]
+candidates = ["Candidate A", "Candidate B", "Candidate C"]
+
+votes = {}
+for voter in voter_list:
+    vote_casted = random.choice(candidates)
+    votes[voter] = vote_casted
+
+
+vote_count = {candidate: 0 for candidate in candidates}
+for vote in votes.values():
+    vote_count[vote] += 1
+
+
+sorted_votes = sorted(vote_count.items(), key=lambda x: x[1], reverse=True)
+winner, winner_votes = sorted_votes[0]
+runner_up, runner_up_votes = sorted_votes[1]
+
+print("Election Results:")
+print("-----------------")
+print("Winner:", winner, "with", winner_votes, "votes")
+print("Runner-up:", runner_up, "with", runner_up_votes, "votes")
+
+winner_voters = [voter for voter, vote in votes.items() if vote == winner]
+runner_up_voters = [voter for voter, vote in votes.items() if vote == runner_up]
+
+print("\nMembers who voted for the winner:")
+print(winner_voters)
+
+print("\nMembers who voted for the runner-up:")
+print(runner_up_voters)
+
+Output:
+Election Results:
+-----------------
+Winner: Candidate A with 5 votes
+Runner-up: Candidate B with 4 votes
+
+Members who voted for the winner:
+['Voter2', 'Voter5', 'Voter6', 'Voter8', 'Voter9']
+
+Members who voted for the runner-up:
+['Voter1', 'Voter3', 'Voter4', 'Voter10']
