@@ -1,0 +1,36 @@
+def india_to_usd(india_rupee):
+    return india_rupee / 74.5
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def calculate_bmi(weight_kg, height_m):
+    return weight_kg / (height_m ** 2)
+
+def calculate_simple_interest(principal, rate, time):
+    return (principal * rate * time) / 100
+
+india_rupee = 1000
+usd = india_to_usd(india_rupee)
+print(f'{india_rupee} Rupees = {usd} USD')
+
+celsius = 25
+fahrenheit = celsius_to_fahrenheit(celsius)
+print(f'{celsius} Celsius = {fahrenheit} Fahrenheit')
+
+weight_kg = 65
+height_m = 1.75
+bmi = calculate_bmi(weight_kg, height_m)
+print(f'BMI: {bmi}')
+
+principal = 1000
+rate = 5
+time = 2
+simple_interest = calculate_simple_interest(principal, rate, time)
+print(f'Simple Interest: {simple_interest}')
+
+Output:
+1000 Rupees = 13.422818791946309 USD
+25 Celsius = 77.0 Fahrenheit
+BMI: 21.224489795918366
+Simple Interest: 100.0
