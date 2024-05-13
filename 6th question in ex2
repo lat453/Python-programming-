@@ -1,0 +1,12 @@
+from collections import Counter
+
+def most_frequent(lst):
+    counts = Counter(lst)
+    most_common_element = max(counts, key=counts.get)
+    return most_common_element
+
+a = [4, 5, 6, 4, 6, 7, 4, 2, 4, 8, 4]
+print(most_frequent(a))
+
+Output:
+4
