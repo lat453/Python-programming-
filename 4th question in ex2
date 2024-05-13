@@ -1,0 +1,22 @@
+def ascending_sort(nums):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] > nums[j]:
+                nums[i], nums[j] = nums[j], nums[i]
+    return nums
+
+def descending_sort(nums):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] < nums[j]:
+                nums[i], nums[j] = nums[j], nums[i]
+    return nums
+
+nums = [5, 3, 7, 9, 8, 4, 2]
+ascending_order = ascending_sort(nums.copy())
+descending_order = descending_sort(nums.copy())
+print( ascending_order,"- Ascending Order , ", descending_order,"- Descending Order")
+
+Output:
+ [2,3,4,5,7,8,9] – Ascending Order, 
+ [9,8,7,5,4,3,2] – Descending Order
