@@ -1,0 +1,23 @@
+def find_largest_smallest(numbers):
+    if not numbers:
+        return None, None
+
+    largest = numbers[0]
+    smallest = numbers[0]
+
+    for num in numbers:
+        if num > largest:
+            largest = num
+        elif num < smallest:
+            smallest = num
+
+    return largest, smallest
+
+numbers = [12, 45, 78, 23, 56, 89, 34, 9]
+largest, smallest = find_largest_smallest(numbers)
+print("Largest number:", largest)
+print("Smallest number:", smallest)
+
+Output:
+Largest number: 89
+Smallest number: 9
