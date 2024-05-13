@@ -1,0 +1,7 @@
+a = [45, 67, 83, 24, 55, 87, 77, 34]
+number_to_find = 55
+index_position = a.index(number_to_find)
+print("The position of", number_to_find, "is:", index_position)
+
+Output:
+The position of 55 is: 4
