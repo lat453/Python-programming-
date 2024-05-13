@@ -1,0 +1,30 @@
+def find_second_largest_smallest(nums):
+    if len(nums) < 2:
+        return "List should have at least two elements."
+
+    max_num = min_num = float('inf')
+    second_max = second_min = float('-inf')
+
+    for num in nums:
+        if num > max_num:
+            second_max = max_num
+            max_num = num
+        elif num > second_max and num != max_num:
+            second_max = num
+
+        if num < min_num:
+            second_min = min_num
+            min_num = num
+        elif num < second_min and num != min_num:
+            second_min = num
+
+    return second_max, second_min
+
+nums = [12, 45, 2, 41, 31, 10, 8, 6, 50]
+second_largest, second_smallest = find_second_largest_smallest(nums)
+print("Second largest number:", second_largest)
+print("Second smallest number:", second_smallest
+
+Output:
+Second largest number: 50
+Second smallest number: 6
