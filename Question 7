@@ -1,0 +1,6 @@
+sorted_array = np.sort(random_numbers)
+
+print("Sorted array:", sorted_array)
+
+
+
