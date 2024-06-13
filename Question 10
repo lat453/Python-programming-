@@ -1,0 +1,21 @@
+def append_to_file(filename, data):
+
+    with open(filename, 'a') as file:
+
+        file.write(data)
+
+
+
+def read_updated_file(filename):
+
+    with open(filename, 'r') as file:
+
+        return file.read()
+
+
+
+append_to_file('random_numbers.txt', "New data\n")
+
+updated_content = read_updated_file('random_numbers.txt')
+
+print(updated_content)
