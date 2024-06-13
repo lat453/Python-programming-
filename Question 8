@@ -1,0 +1,5 @@
+reshaped_array = random_numbers.reshape(2, 5)
+
+print("Reshaped array (2x5):", reshaped_array)
+
+
