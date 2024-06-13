@@ -7,4 +7,8 @@ def generate_random_numbers(filename, count=100):
         for _ in range(count):
 
             file.write(f"{random.random()}\n")
+generate_random_numbers('random_numbers.txt', 100)
+
+
+
 
