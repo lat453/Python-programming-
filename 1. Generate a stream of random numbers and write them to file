@@ -1,0 +1,10 @@
+import random
+
+def generate_random_numbers(filename, count=100):
+
+    with open(filename, 'w') as file:
+
+        for _ in range(count):
+
+            file.write(f"{random.random()}\n")
+
