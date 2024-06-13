@@ -1,0 +1,7 @@
+print("Element at (1, 2):", reshaped_array[1, 2])
+
+print("First row:", reshaped_array[0, :])
+
+print("First column:", reshaped_array[:, 0])
+
+
